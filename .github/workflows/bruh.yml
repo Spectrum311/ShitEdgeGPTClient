@@ -1,0 +1,16 @@
+name: Install EdgeGPT
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+      
+    - name: Install EdgeGPT
+      run: python3 -m pip install EdgeGPT --upgrade
